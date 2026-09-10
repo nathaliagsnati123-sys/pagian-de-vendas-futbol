@@ -5,6 +5,8 @@
 
 export const CHECKOUT_URL = "https://pay.hotmart.com/YOUR_HOTMART_CODE?checkoutMode=10";
 
+export const META_PIXEL_ID = "2285247058899912";
+
 export const PRODUCT_CONFIG = {
   name: "Fútbol+",
   tagline: "1.000 EJERCICIOS PARA LLEVAR TU ENTRENAMIENTO AL SIGUIENTE NIVEL",
