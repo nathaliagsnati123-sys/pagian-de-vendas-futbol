@@ -1,0 +1,6 @@
+{
+  "name": "App Fútbol+ | 1.000 Ejercicios de Fútbol",
+  "description": "Aplicación interactiva de fútbol con 1.000 ejercicios profesionales, buscador, filtros por edad y 10 bonos para entrenadores.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
