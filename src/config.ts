@@ -7,6 +7,9 @@ export const CHECKOUT_URL = "https://pay.hotmart.com/YOUR_HOTMART_CODE?checkoutM
 
 export const META_PIXEL_ID = "2285247058899912";
 
+export const SITE_DOMAIN = "ejerciciodefutbol.online";
+export const SITE_URL = "https://ejerciciodefutbol.online";
+
 export const PRODUCT_CONFIG = {
   name: "Fútbol+",
   tagline: "1.000 EJERCICIOS PARA LLEVAR TU ENTRENAMIENTO AL SIGUIENTE NIVEL",
@@ -17,5 +20,7 @@ export const PRODUCT_CONFIG = {
   exerciseCount: "1.000",
   bonusesCount: "10",
   format: "Aplicación Web + Acceso Digital Inmediato",
-  supportEmail: "soporte@futbolplus.online",
+  domain: "ejerciciodefutbol.online",
+  siteUrl: "https://ejerciciodefutbol.online",
+  supportEmail: "soporte@ejerciciodefutbol.online",
 };
