@@ -3,7 +3,7 @@
  * Aquí puedes cambiar fácilmente el enlace de checkout externo (ej. Hotmart)
  */
 
-export const CHECKOUT_URL = "https://pay.hotmart.com/YOUR_HOTMART_CODE?checkoutMode=10";
+export const CHECKOUT_URL = "https://pay.hotmart.com/S107561704C?checkoutMode=10";
 
 export const META_PIXEL_ID = "2285247058899912";
 
