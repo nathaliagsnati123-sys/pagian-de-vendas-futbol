@@ -5,7 +5,7 @@
 
 export const CHECKOUT_URL = "https://pay.hotmart.com/S107561704C?checkoutMode=10";
 
-export const META_PIXEL_ID = "2285247058899912";
+export const META_PIXEL_ID = "1765420381338670";
 
 export const SITE_DOMAIN = "ejerciciodefutbol.online";
 export const SITE_URL = "https://ejerciciodefutbol.online";

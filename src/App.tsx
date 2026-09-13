@@ -4,11 +4,11 @@ import { HeroSection } from "./components/HeroSection";
 import { ExercisesSection } from "./components/ExercisesSection";
 import { FiltersSection } from "./components/FiltersSection";
 import { BonusesSection } from "./components/BonusesSection";
+import { ReviewsSection } from "./components/ReviewsSection";
 import { ValueComparisonSection } from "./components/ValueComparisonSection";
 import { GuaranteeSection } from "./components/GuaranteeSection";
 import { FaqSection } from "./components/FaqSection";
 import { Footer } from "./components/Footer";
-import { FloatingCtaBar } from "./components/FloatingCtaBar";
 
 export default function App() {
   return (
@@ -30,6 +30,9 @@ export default function App() {
         {/* SECCIÓN — 10 BONOS */}
         <BonusesSection />
 
+        {/* SECCIÓN — AVALIAÇÕES / TESTIMONIOS (DESLIZANDO HACIA LA IZQUIERDA) */}
+        <ReviewsSection />
+
         {/* SECCIÓN — COMPARACIÓN DE VALOR */}
         <ValueComparisonSection />
 
@@ -42,9 +45,6 @@ export default function App() {
 
       {/* FOOTER */}
       <Footer />
-
-      {/* Floating Sticky Conversion Bar */}
-      <FloatingCtaBar />
     </div>
   );
 }
