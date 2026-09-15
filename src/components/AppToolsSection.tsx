@@ -117,7 +117,7 @@ export const AppToolsSection: React.FC = () => {
                 Todo Incluido
               </span>
               <h3 className="text-lg font-bold text-white mt-3">
-                Todas las herramientas por US$ 9,90
+                Todas las herramientas por US$ 7,90
               </h3>
               <p className="mt-2 text-xs sm:text-sm text-emerald-200/80 leading-relaxed">
                 Sin suscripciones mensuales recurrentes ni pagos ocultos. Un solo pago y acceso completo.

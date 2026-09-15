@@ -6,7 +6,7 @@ export const AccessStepsSection: React.FC = () => {
     {
       step: "01",
       title: "Adquiere la App Fútbol+",
-      subtitle: "Pago protegido de US$ 9,90",
+      subtitle: "Pago protegido de US$ 7,90",
       description: "Haz clic en el botón de compra, completa el checkout cifrado y confirma tu pago seguro por tarjeta o método preferido.",
       icon: CreditCard,
     },

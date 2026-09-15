@@ -62,7 +62,7 @@ const REVIEWS: Review[] = [
     rating: 5,
     date: "Hace 5 días",
     comment:
-      "Compré con dudas por el precio tan accesible de US$ 9,90, pero es de un nivel altísimo. Las fichas de finalización y rondos de posesión las usamos a diario con los profes del club.",
+      "Compré con dudas por el precio tan accesible de US$ 7,90, pero es de un nivel altísimo. Las fichas de finalización y rondos de posesión las usamos a diario con los profes del club.",
     tag: "Academia Juvenil",
     initials: "MV",
     avatarUrl: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=160&auto=format&fit=crop&q=80",

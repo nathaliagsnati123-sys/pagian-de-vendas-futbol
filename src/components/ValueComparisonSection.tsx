@@ -16,7 +16,7 @@ export const ValueComparisonSection: React.FC = () => {
             <span>Oferta Especial de Lanzamiento</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-950 tracking-tight font-display">
-            TODO LO QUE RECIBES POR SOLO US$ 9,90
+            TODO LO QUE RECIBES POR SOLO US$ 7,90
           </h2>
           <p className="mt-3 text-base sm:text-lg text-slate-600 font-medium">
             Acceso completo e inmediato a la aplicación con toda la biblioteca de ejercicios y bonos incluidos.
@@ -87,7 +87,7 @@ export const ValueComparisonSection: React.FC = () => {
               rel="noopener noreferrer"
               className="mt-5 w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 active:scale-[0.98] text-slate-950 font-black text-sm sm:text-base tracking-wide shadow-lg shadow-emerald-900/40 transition"
             >
-              <span>OBTENER ACCESO POR US$ 9,90</span>
+              <span>OBTENER ACCESO POR US$ 7,90</span>
               <ArrowRight className="w-4 h-4" />
             </a>
 

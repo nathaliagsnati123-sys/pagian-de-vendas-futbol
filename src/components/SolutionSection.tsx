@@ -76,7 +76,7 @@ export const SolutionSection: React.FC = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm font-bold text-emerald-700 hover:text-emerald-800 transition"
               >
-                <span>Acceder a la App Fútbol+ por solo US$ 9,90</span>
+                <span>Acceder a la App Fútbol+ por solo US$ 7,90</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
             </div>

@@ -333,7 +333,7 @@ export const AppShowcaseSection: React.FC = () => {
               rel="noopener noreferrer"
               className="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 font-bold text-white transition"
             >
-              COMPRAR AHORA · US$ 9,90
+              COMPRAR AHORA · US$ 7,90
             </a>
           </div>
         </div>

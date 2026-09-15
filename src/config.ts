@@ -15,7 +15,7 @@ export const PRODUCT_CONFIG = {
   tagline: "1.000 EJERCICIOS PARA LLEVAR TU ENTRENAMIENTO AL SIGUIENTE NIVEL",
   positioning: "La biblioteca profesional de ejercicios de fútbol para entrenadores y jugadores.",
   regularPrice: "19,90",
-  specialPrice: "9,90",
+  specialPrice: "7,90",
   currency: "US$",
   exerciseCount: "1.000",
   bonusesCount: "10",
