@@ -17,11 +17,7 @@ import {
   UserCheck,
   UserPlus,
   Grid,
-  CheckCircle2,
-  ChevronRight,
-  Search,
 } from "lucide-react";
-import { CHECKOUT_URL } from "../config";
 
 const iconMap: Record<string, React.FC<{ className?: string }>> = {
   Flame,
@@ -137,8 +133,6 @@ export const ExercisesSection: React.FC = () => {
             );
           })}
         </div>
-
-
       </div>
     </section>
   );

@@ -59,16 +59,4 @@ export const FAQS: FaqItem[] = [
     answer:
       "No. Fútbol+ funciona como una aplicación web directa. No ocupa espacio pesado en la memoria de tu teléfono ni requiere descargas engorrosas desde tiendas de aplicaciones.",
   },
-  {
-    id: "faq-10",
-    question: "¿Puedo utilizarlo en computadora?",
-    answer:
-      "Sí. Puedes acceder desde un navegador compatible y, cuando esté disponible, instalarlo como aplicación en tu laptop o PC de escritorio para planificar tus sesiones con una vista más amplia.",
-  },
-  {
-    id: "faq-11",
-    question: "¿Tiene garantía mi compra?",
-    answer:
-      "¡Totalmente! Cuentas con 7 días de garantía incondicional. Puedes acceder a la plataforma, probar los más de 1.000 ejercicios y revisar los 10 bonos. Si por cualquier motivo no estás 100% satisfecho, te reembolsamos el 100% de tu dinero sin hacer preguntas.",
-  },
 ];

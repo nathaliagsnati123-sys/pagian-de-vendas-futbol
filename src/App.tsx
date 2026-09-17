@@ -2,7 +2,6 @@ import React from "react";
 import { Navbar } from "./components/Navbar";
 import { HeroSection } from "./components/HeroSection";
 import { ExercisesSection } from "./components/ExercisesSection";
-import { FiltersSection } from "./components/FiltersSection";
 import { BonusesSection } from "./components/BonusesSection";
 import { ReviewsSection } from "./components/ReviewsSection";
 import { ValueComparisonSection } from "./components/ValueComparisonSection";
@@ -23,9 +22,6 @@ export default function App() {
 
         {/* SECCIÓN — 1.000 EJERCICIOS */}
         <ExercisesSection />
-
-        {/* SECCIÓN — FILTROS */}
-        <FiltersSection />
 
         {/* SECCIÓN — 10 BONOS */}
         <BonusesSection />
