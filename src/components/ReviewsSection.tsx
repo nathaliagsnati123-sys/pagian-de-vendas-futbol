@@ -18,13 +18,13 @@ const REVIEWS: Review[] = [
   {
     id: "rev-1",
     name: "Carlos Mendoza",
-    role: "Entrenador Sub-14",
+    role: "Entrenador y Jugador",
     location: "Madrid, España",
     rating: 5,
     date: "Hace 2 días",
     comment:
-      "Me ahorra como 2 horas de planificación cada semana. Busco ejercicios de presión tras pérdida o repliegue y los diagramas son súper claros para explicarle a los chicos en la tablet.",
-    tag: "Ahorro de Tiempo",
+      "El Reto 30 Días me quitó el dolor de cabeza de pensar qué entrenar cada sesión. Saber exactamente qué hacer en 20 minutos hace toda la diferencia.",
+    tag: "Plan Estructurado",
     initials: "CM",
     avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=160&auto=format&fit=crop&q=80",
   },
@@ -36,8 +36,8 @@ const REVIEWS: Review[] = [
     rating: 5,
     date: "Hace 4 días",
     comment:
-      "La variedad es impresionante. Tener 1.000 ejercicios organizados con variantes según la cantidad de jugadores me cambió las prácticas. Los bonos de fútbol base valen oro.",
-    tag: "Fútbol Base",
+      "La combinación del Reto diario más la biblioteca de +1.000 ejercicios es perfecta. Tienes el camino guiado y luego variedad infinita para seguir entrenando.",
+    tag: "Variedad y Plan",
     initials: "DA",
     avatarUrl: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=160&auto=format&fit=crop&q=80",
   },
@@ -49,7 +49,7 @@ const REVIEWS: Review[] = [
     rating: 5,
     date: "Esta semana",
     comment:
-      "Excelente aplicación. La abro directamente desde el celular en la cancha. El filtro por intensidad física y espacios reducidos es de lo más útil que he visto en años.",
+      "Excelente aplicación. La abro directamente desde el celular en la cancha. El bono de preparación física y los ejercicios por objetivo son impecables.",
     tag: "Preparación Física",
     initials: "JM",
     avatarUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=160&auto=format&fit=crop&q=80",
@@ -57,72 +57,45 @@ const REVIEWS: Review[] = [
   {
     id: "rev-4",
     name: "Matías E. Vargas",
-    role: "Coordinador de Academia",
+    role: "Jugador y Monitor",
     location: "Montevideo, Uruguay",
     rating: 5,
     date: "Hace 5 días",
     comment:
-      "Compré con dudas por el precio tan accesible de US$ 7,90, pero es de un nivel altísimo. Las fichas de finalización y rondos de posesión las usamos a diario con los profes del club.",
-    tag: "Academia Juvenil",
+      "Compré con dudas por el precio de US$ 7,90, pero el valor es tremendo. El reto de pierna débil en 7 días me ayudó a ganar confianza que antes no tenía.",
+    tag: "Pierna Débil",
     initials: "MV",
     avatarUrl: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=160&auto=format&fit=crop&q=80",
   },
   {
     id: "rev-5",
     name: "Alejandro Ortiz",
-    role: "Entrenador Categoría Juvenil",
+    role: "Entrenador Juvenil",
     location: "Guadalajara, México",
     rating: 5,
     date: "Hace 1 semana",
     comment:
-      "Lo mejor es que no necesito descargar nada pesado. Funciona rapidísimo en mi teléfono y los ejercicios de técnica individual con balón son muy dinámicos. 100% recomendado.",
-    tag: "Técnica Individual",
+      "Lo mejor es que no necesitas descargar nada pesado. Funciona rapidísimo en mi teléfono y los entrenamientos de 20 minutos se completan sin excusas.",
+    tag: "20 Minutos al Día",
     initials: "AO",
     avatarUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=160&auto=format&fit=crop&q=80",
   },
   {
     id: "rev-6",
     name: "Gonzalo F. Benítez",
-    role: "Director Técnico Senior",
+    role: "Director Técnico",
     location: "Bogotá, Colombia",
     rating: 5,
     date: "Hace 1 semana",
     comment:
-      "Las 100 sesiones listas para usar del bono 2 te salvan la vida cuando no tienes tiempo de armar la semana. Es la mejor inversión que he hecho este año para mi cuerpo técnico.",
-    tag: "Sesiones Listas",
+      "Tener los 50 entrenamientos listos y el reto diario organizado te ahorra horas. Es una inversión mínima para tener acceso de por vida.",
+    tag: "Acceso de por Vida",
     initials: "GB",
     avatarUrl: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=160&auto=format&fit=crop&q=80",
-  },
-  {
-    id: "rev-7",
-    name: "Sebastián Cruz",
-    role: "Formador Escuelas de Fútbol",
-    location: "Lima, Perú",
-    rating: 5,
-    date: "Hace 2 semanas",
-    comment:
-      "Mis entrenamientos ahora tienen mucha más fluidez y dinamismo. Los diagramas tácticos son intuitivos y a los padres les encanta ver la organización profesional del equipo.",
-    tag: "Organización Pro",
-    initials: "SC",
-    avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=160&auto=format&fit=crop&q=80",
-  },
-  {
-    id: "rev-8",
-    name: "Rodrigo Silva",
-    role: "Entrenador Fútbol 7 y Sala",
-    location: "Valencia, España",
-    rating: 5,
-    date: "Hace 2 semanas",
-    comment:
-      "La velocidad de filtrado es increíble. En 30 segundos encuentro tareas específicas para mejorar la transición ofensiva y el pase entre líneas. Excelente herramienta.",
-    tag: "Táctica y Rondos",
-    initials: "RS",
-    avatarUrl: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=160&auto=format&fit=crop&q=80",
   },
 ];
 
 export const ReviewsSection: React.FC = () => {
-  // We duplicate the reviews array to ensure infinite seamless loop
   const duplicatedReviews = [...REVIEWS, ...REVIEWS];
 
   return (
@@ -134,16 +107,16 @@ export const ReviewsSection: React.FC = () => {
         {/* Header Badge */}
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200/80 text-xs font-bold uppercase tracking-wider mb-3 shadow-xs">
           <MessageSquare className="w-3.5 h-3.5 text-emerald-600" />
-          <span>Avaliações & Experiencias Reales</span>
+          <span>Experiencias Reales</span>
         </div>
 
         {/* Headline */}
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-950 tracking-tight font-display">
-          LO QUE DICEN LOS ENTRENADORES
+          LO QUE DICEN QUIENES YA ENTRENAN
         </h2>
 
         <p className="mt-3 text-base sm:text-lg text-slate-600 font-medium max-w-2xl mx-auto">
-          Más de 1.840 entrenadores, preparadores físicos y coordinadores ya planifican sus entrenamientos con Fútbol+.
+          Jugadores y entrenadores que ya siguen el plan y aplican los ejercicios en sus sesiones.
         </p>
 
         {/* Trust Badges Bar */}
@@ -166,19 +139,18 @@ export const ReviewsSection: React.FC = () => {
 
           <div className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-full border border-slate-200/80 shadow-xs">
             <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
-            <span className="font-black text-slate-950">+1.840</span>
-            <span className="text-slate-400">Usuarios activos</span>
+            <span className="font-black text-slate-950">Acceso Inmediato</span>
+            <span className="text-slate-400">Garantizado</span>
           </div>
         </div>
       </div>
 
       {/* Sliding Marquee Container */}
       <div className="relative mt-10 sm:mt-14 w-full overflow-hidden">
-        {/* Left and Right Fade Gradients for smooth infinite sliding effect */}
         <div className="pointer-events-none absolute inset-y-0 left-0 w-12 sm:w-28 bg-gradient-to-r from-slate-50 via-slate-50/80 to-transparent z-10" />
         <div className="pointer-events-none absolute inset-y-0 right-0 w-12 sm:w-28 bg-gradient-to-l from-slate-50 via-slate-50/80 to-transparent z-10" />
 
-        {/* Marquee Track sliding to the left */}
+        {/* Marquee Track */}
         <div className="animate-marquee-left py-2 gap-5 sm:gap-6 flex">
           {duplicatedReviews.map((review, idx) => (
             <div
@@ -186,7 +158,6 @@ export const ReviewsSection: React.FC = () => {
               className="w-[300px] sm:w-[350px] shrink-0 bg-white p-5 sm:p-6 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md hover:border-emerald-300 transition-all flex flex-col justify-between select-none text-left"
             >
               <div>
-                {/* Top Rating & Tag */}
                 <div className="flex items-center justify-between gap-2 mb-3">
                   <div className="flex text-amber-400">
                     {[...Array(review.rating)].map((_, i) => (
@@ -198,13 +169,11 @@ export const ReviewsSection: React.FC = () => {
                   </span>
                 </div>
 
-                {/* Review Text */}
                 <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-normal">
                   "{review.comment}"
                 </p>
               </div>
 
-              {/* Author Info */}
               <div className="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className="relative w-10 h-10 rounded-full overflow-hidden shrink-0 border border-slate-200 ring-2 ring-emerald-500/20 shadow-xs bg-slate-100">
@@ -237,9 +206,8 @@ export const ReviewsSection: React.FC = () => {
           ))}
         </div>
 
-        {/* Subtle helper note */}
         <p className="text-center text-[11px] text-slate-400 mt-4">
-          ← Desliza suavemente · Pasa el cursor o mantén presionado para pausar →
+          ← Desliza suavemente · Pasa el cursor para pausar →
         </p>
       </div>
     </section>

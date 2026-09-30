@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { PRODUCT_CONFIG } from "../config";
-import { X, Mail, ShieldAlert } from "lucide-react";
+import { X, Mail } from "lucide-react";
 
 export const Footer: React.FC = () => {
   const [modalType, setModalType] = useState<"terms" | "privacy" | "contact" | null>(null);
@@ -18,10 +18,10 @@ export const Footer: React.FC = () => {
             </div>
             <div>
               <span className="text-base font-extrabold text-slate-900 tracking-tight font-display">
-                FÚTBOL<span className="text-emerald-600">+</span>
+                RETO 30 DÍAS<span className="text-emerald-600"> — FÚTBOL</span>
               </span>
               <p className="text-[11px] text-slate-500">
-                La biblioteca profesional de ejercicios de fútbol
+                Mejora tu fútbol entrenando solo 20 minutos al día
               </p>
             </div>
           </div>
@@ -55,7 +55,7 @@ export const Footer: React.FC = () => {
         {/* Disclaimer & Copyright */}
         <div className="pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left text-[11px] text-slate-400">
           <p>
-            © {new Date().getFullYear()} Fútbol+. Todos los derechos reservados.
+            © {new Date().getFullYear()} Reto 30 Días — Fútbol. Todos los derechos reservados.
           </p>
           <p className="max-w-xl">
             Este sitio web no forma parte del sitio web de Meta, Facebook Inc. o Google. Adicionalmente, este sitio NO está respaldado por Meta ni Google de ninguna manera.
@@ -81,13 +81,13 @@ export const Footer: React.FC = () => {
                 </h3>
                 <div className="text-xs space-y-2.5 text-slate-600 leading-relaxed">
                   <p>
-                    Bienvenido a Fútbol+. Al adquirir acceso a nuestro producto digital, aceptas los siguientes términos de servicio:
+                    Bienvenido a Reto 30 Días — Fútbol. Al adquirir acceso a nuestro producto digital, aceptas los siguientes términos de servicio:
                   </p>
                   <p>
-                    <strong>1. Licencia de Uso:</strong> El acceso al material, ejercicios y bonos es personal e intransferible para el comprador. Queda prohibida la reventa, redistribución masiva o comercialización no autorizada.
+                    <strong>1. Licencia de Uso:</strong> El acceso al Reto 30 Días, material, ejercicios y bonos es personal para el comprador con acceso de por vida.
                   </p>
                   <p>
-                    <strong>2. Naturaleza del Producto:</strong> Fútbol+ es una plataforma web directa de consulta didáctica y deportiva para entrenadores y jugadores.
+                    <strong>2. Naturaleza del Producto:</strong> Plataforma web directa de consulta didáctica y deportiva estructurada para entrenamientos de fútbol.
                   </p>
                   <p>
                     <strong>3. Entrega Digital:</strong> La entrega del acceso es electrónica e inmediata tras la confirmación del pago en la pasarela externa segura.
@@ -103,13 +103,13 @@ export const Footer: React.FC = () => {
                 </h3>
                 <div className="text-xs space-y-2.5 text-slate-600 leading-relaxed">
                   <p>
-                    En Fútbol+ nos tomamos muy en serio la privacidad de tus datos personales:
+                    En Reto 30 Días — Fútbol nos tomamos muy en serio la privacidad de tus datos personales:
                   </p>
                   <p>
                     <strong>1. Datos Recopilados:</strong> Únicamente se solicita el correo electrónico necesario para el envío de tu acceso al producto.
                   </p>
                   <p>
-                    <strong>2. Seguridad del Pago:</strong> Todos los datos de facturación son procesados por pasarelas certificadas con cifrado SSL de 256 bits. Fútbol+ nunca almacena números de tarjeta ni datos bancarios.
+                    <strong>2. Seguridad del Pago:</strong> Todos los datos de facturación son procesados por pasarelas certificadas con cifrado SSL de 256 bits. Nunca almacenamos números de tarjeta ni datos bancarios.
                   </p>
                   <p>
                     <strong>3. Confidencialidad:</strong> No compartimos ni vendemos tu información a terceros bajo ninguna circunstancia.
@@ -125,7 +125,7 @@ export const Footer: React.FC = () => {
                 </h3>
                 <div className="text-xs space-y-3 text-slate-600 leading-relaxed">
                   <p>
-                    ¿Tienes alguna duda sobre tu acceso o necesitas soporte técnico con Fútbol+? Estamos a tu disposición:
+                    ¿Tienes alguna duda sobre tu acceso o necesitas soporte técnico? Estamos a tu disposición:
                   </p>
                   <div className="p-3 bg-emerald-50 rounded-xl border border-emerald-200 text-emerald-900 flex items-center gap-2.5 font-medium">
                     <Mail className="w-4 h-4 text-emerald-700" />

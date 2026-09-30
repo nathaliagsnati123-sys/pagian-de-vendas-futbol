@@ -1,95 +1,87 @@
 import React from "react";
-import { Search, Sliders, CheckSquare, Trophy } from "lucide-react";
+import { Smartphone, Clock, CheckCheck } from "lucide-react";
 
 export const HowItWorksSection: React.FC = () => {
   const steps = [
     {
       number: "01",
-      title: "Busca",
-      subtitle: "Por palabra clave o concepto",
-      description: "Escribe lo que quieres trabajar: contraataque, posesión, 1v1, centros o rondos.",
-      icon: Search,
+      icon: Smartphone,
+      title: "ABRE EL ENTRENAMIENTO DEL DÍA",
+      desc: "Entras desde tu celular, tablet o computadora y abres la sesión que te toca hoy.",
     },
     {
       number: "02",
-      title: "Filtra",
-      subtitle: "Parámetros exactos de tu equipo",
-      description: "Ajusta por edad, nivel, número de jugadores, duración, intensidad y espacio disponible.",
-      icon: Sliders,
+      icon: Clock,
+      title: "SIGUE LA SESIÓN DURANTE 20 MINUTOS",
+      desc: "Colocas tus conos o referencias y completas los ejercicios guiados paso a paso.",
     },
     {
       number: "03",
-      title: "Elige",
-      subtitle: "Visualiza el diagrama táctico",
-      description: "Revisa la tarea con gráfico del campo, objetivos, reglas de provocación y variantes.",
-      icon: CheckSquare,
-    },
-    {
-      number: "04",
-      title: "Entrena",
-      subtitle: "Aplica en el césped con confianza",
-      description: "Llévalo en tu teléfono móvil o imprímelo en ficha para dirigir una sesión profesional.",
-      icon: Trophy,
+      icon: CheckCheck,
+      title: "MARCA EL DÍA Y CONTINÚA MAÑANA",
+      desc: "Registras tu día como completado y descansas con la tranquilidad de haber cumplido.",
     },
   ];
 
   return (
     <section
       id="como-funciona"
-      className="py-16 md:py-24 bg-slate-50 border-b border-slate-200/60"
+      className="py-16 md:py-20 bg-white border-b border-slate-200/70"
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto">
-          <span className="text-xs uppercase font-extrabold tracking-wider text-emerald-700 bg-emerald-100/70 px-3 py-1 rounded-full border border-emerald-300/60">
-            Paso a Paso
-          </span>
-          <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-950 tracking-tight font-display">
-            ENCUENTRA EL EJERCICIO QUE NECESITAS EN SEGUNDOS
-          </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-600 font-medium max-w-2xl mx-auto">
-            Busca por objetivo, edad, nivel, número de jugadores, duración, intensidad y espacio.
-          </p>
-        </div>
+        <span className="text-xs uppercase font-extrabold tracking-wider text-slate-700 bg-slate-100 px-3.5 py-1.5 rounded-full border border-slate-200 shadow-2xs inline-block">
+          Proceso Simple en 3 Pasos
+        </span>
 
-        {/* 4 Steps Grid */}
-        <div className="mt-12 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {steps.map((step, idx) => {
-            const Icon = step.icon;
+        <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl font-black text-slate-950 tracking-tight font-display">
+          CÓMO FUNCIONA TU RUTINA DIARIA
+        </h2>
+
+        {/* 3 Step Cards */}
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+          {steps.map((st) => {
+            const Icon = st.icon;
             return (
               <div
-                key={idx}
-                className="relative p-6 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between text-left"
+                key={st.number}
+                className="p-6 sm:p-7 rounded-3xl bg-slate-50 border border-slate-200/90 shadow-xs flex flex-col justify-between"
               >
                 <div>
-                  {/* Step Number Badge */}
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-3xl sm:text-4xl font-black text-emerald-600/30 font-display">
-                      {step.number}
+                    <span className="text-2xl font-black text-emerald-700 font-display">
+                      {st.number}
                     </span>
-                    <div className="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-700 flex items-center justify-center">
+                    <div className="w-10 h-10 rounded-xl bg-white text-emerald-700 border border-slate-200 flex items-center justify-center shadow-xs">
                       <Icon className="w-5 h-5" />
                     </div>
                   </div>
 
-                  <h3 className="text-lg font-bold text-slate-900">
-                    {step.title}
+                  <h3 className="text-base font-black text-slate-900 leading-snug">
+                    {st.title}
                   </h3>
-                  <p className="text-xs font-semibold text-emerald-700 mt-0.5">
-                    {step.subtitle}
-                  </p>
-                  <p className="mt-2.5 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                    {step.description}
+
+                  <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    {st.desc}
                   </p>
                 </div>
 
-                <div className="mt-4 pt-3 border-t border-slate-100 flex items-center text-[11px] text-slate-400 font-medium">
-                  <span>Paso {idx + 1} de 4</span>
+                <div className="mt-5 pt-3 border-t border-slate-200/60 text-[11px] font-bold text-emerald-800">
+                  Paso {st.number} del día
                 </div>
               </div>
             );
           })}
         </div>
+
+        {/* Frase de cierre requerida */}
+        <div className="mt-8 inline-block p-4 rounded-2xl bg-emerald-50 border border-emerald-200/80 text-center">
+          <p className="text-sm sm:text-base font-extrabold text-emerald-950">
+            Sin improvisar. Sin perder tiempo buscando qué hacer.
+          </p>
+        </div>
+
       </div>
     </section>
   );

@@ -1,110 +1,139 @@
 import React from "react";
+import offerBundleImg from "../assets/images/oferta_bundle_completo_1790777854659.jpg";
 import { CHECKOUT_URL, PRODUCT_CONFIG } from "../config";
 import {
+  CheckCircle2,
   ArrowRight,
-  ShieldCheck,
-  Zap,
   Lock,
-  Sparkles,
-  CheckCircle,
+  Zap,
+  ShieldCheck,
 } from "lucide-react";
 
 export const OfferSection: React.FC = () => {
+  const inclusions = [
+    "⚽ Reto 30 Días — Fútbol estructurado día a día",
+    "📅 30 entrenamientos guiados paso a paso",
+    "⏱️ Sesiones de aproximadamente 20 minutos",
+    "⚽ Más de 1.000 ejercicios listos para continuar",
+    "🎯 Entrenamientos clasificados por objetivo",
+    "🎁 6 Bonos de especialización incluidos (Gratis)",
+    "🔒 Acceso ilimitado y de por vida incluido",
+  ];
+
   return (
     <section
       id="oferta"
-      className="py-16 md:py-24 bg-white border-b border-slate-200/60"
+      className="py-16 md:py-24 bg-gradient-to-b from-slate-50 via-white to-slate-50 border-b border-slate-200/70"
     >
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto">
-          <span className="text-xs uppercase font-extrabold tracking-wider text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
-            Oferta Especial por Tiempo Limitado
-          </span>
-          <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-black text-slate-950 tracking-tight font-display">
-            TODO ESTO POR MUCHO MENOS DE LO QUE IMAGINAS
-          </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-600 font-medium">
-            Acceso digital a Fútbol+ + 1.000 ejercicios + 10 bonos profesionales.
-          </p>
-        </div>
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        
+        {/* Header */}
+        <span className="text-xs uppercase font-extrabold tracking-wider text-emerald-800 bg-emerald-100/80 px-3.5 py-1.5 rounded-full border border-emerald-300 shadow-2xs inline-block">
+          Oferta Completa
+        </span>
 
-        {/* High Conversion Pricing Box */}
-        <div className="mt-12 rounded-3xl bg-gradient-to-b from-slate-50 to-white border-2 border-emerald-600/30 p-6 sm:p-10 shadow-xl shadow-emerald-950/5 relative text-center">
-          {/* Top Pill */}
-          <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-emerald-600 text-white font-extrabold text-xs tracking-wider uppercase shadow-sm">
-            Acceso Completo a la App Fútbol+
-          </div>
+        <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-black text-slate-950 tracking-tight font-display">
+          EMPIEZA CON TU PLAN DE 30 DÍAS
+        </h2>
 
-          {/* Pricing Stack */}
-          <div className="mt-4">
-            <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-500 block mb-1">
-              Precio Habitual
-            </span>
-            <span className="text-xl sm:text-2xl text-slate-400 line-through font-bold">
-              {PRODUCT_CONFIG.currency} {PRODUCT_CONFIG.regularPrice}
-            </span>
+        <p className="mt-3 text-base sm:text-lg text-slate-600 font-medium max-w-xl mx-auto">
+          Recibe acceso inmediato al programa completo, los ejercicios y todos los bonos con un único pago.
+        </p>
 
-            <div className="mt-2 flex items-baseline justify-center gap-1.5">
-              <span className="text-2xl sm:text-3xl font-extrabold text-emerald-700">
-                {PRODUCT_CONFIG.currency}
-              </span>
-              <span className="text-5xl sm:text-6xl font-black text-slate-950 tracking-tight font-display">
-                {PRODUCT_CONFIG.specialPrice}
+        {/* Central Pricing Card with Visual Artwork */}
+        <div className="mt-10 max-w-xl mx-auto rounded-3xl bg-slate-950 text-white overflow-hidden border border-slate-800 shadow-2xl text-left">
+          
+          {/* Bundle Mockup Artwork */}
+          <div className="relative aspect-video w-full overflow-hidden bg-slate-900 select-none">
+            <img
+              src={offerBundleImg}
+              alt="Reto 30 Días Fútbol — Paquete Completo"
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
+            
+            <div className="absolute top-4 left-4">
+              <span className="text-xs font-black uppercase tracking-wider px-3 py-1 rounded-lg bg-slate-950/80 text-emerald-400 border border-emerald-500/30 backdrop-blur-xs">
+                PAQUETE COMPLETO
               </span>
             </div>
-            <span className="text-xs font-semibold text-emerald-700 block mt-1">
-              Pago único de por vida · Sin mensualidades · App siempre disponible
-            </span>
-          </div>
 
-          {/* Feature Highlights inside Offer */}
-          <div className="mt-8 pt-6 border-t border-slate-200/80 max-w-md mx-auto grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-left text-xs sm:text-sm text-slate-700 font-medium">
-            <div className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0" />
-              <span>1.000 ejercicios interactivos</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0" />
-              <span>10 bonos incluidos en la app</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0" />
-              <span>Buscador y filtros en tiempo real</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0" />
-              <span>Celular, Tablet y Computadora</span>
+            <div className="absolute top-4 right-4">
+              <span className="text-xs font-black uppercase tracking-wider px-3 py-1 rounded-lg bg-emerald-500 text-slate-950 shadow-md">
+                ACCESO DE POR VIDA
+              </span>
             </div>
           </div>
 
-          {/* Big CTA Button */}
-          <div className="mt-8 max-w-md mx-auto">
-            <a
-              href={CHECKOUT_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              id="offer-cta-button"
-              className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-emerald-600 hover:bg-emerald-700 active:scale-[0.98] text-white font-black text-lg tracking-wide shadow-lg shadow-emerald-700/25 transition-all"
-            >
-              <span>QUIERO LA APP FÚTBOL+</span>
-              <ArrowRight className="w-5 h-5" />
-            </a>
+          <div className="p-6 sm:p-8">
+            <div className="text-center mb-6">
+              <span className="inline-block text-[11px] font-black uppercase tracking-widest text-emerald-400 bg-emerald-950/80 border border-emerald-700/60 px-3.5 py-1 rounded-full">
+                TODO INCLUIDO EN TU ACCESO
+              </span>
+            </div>
+
+            {/* Checklist */}
+            <div className="space-y-3 bg-slate-900/90 p-5 rounded-2xl border border-slate-800 text-xs sm:text-sm text-slate-200">
+              {inclusions.map((item, idx) => (
+                <div key={idx} className="flex items-center gap-2.5">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <span className="font-semibold">{item}</span>
+                </div>
+              ))}
+            </div>
+
+            {/* Price Callout */}
+            <div className="mt-6 pt-6 border-t border-slate-800 text-center">
+              <div className="flex items-center justify-center gap-3">
+                <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">
+                  Precio regular:
+                </span>
+                <span className="text-base text-slate-400 line-through font-semibold">
+                  {PRODUCT_CONFIG.currency} {PRODUCT_CONFIG.regularPrice}
+                </span>
+              </div>
+
+              <div className="mt-2 flex items-baseline justify-center gap-2">
+                <span className="text-4xl sm:text-5xl font-black text-emerald-400 font-display">
+                  {PRODUCT_CONFIG.currency} {PRODUCT_CONFIG.specialPrice}
+                </span>
+                <span className="text-xs font-bold text-emerald-200 uppercase">
+                  / Pago único
+                </span>
+              </div>
+
+              <p className="text-xs text-slate-400 mt-1 font-semibold">
+                Pago único · Sin mensualidades · Acceso de por vida
+              </p>
+
+              <a
+                href={CHECKOUT_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                id="offer-cta-button"
+                className="mt-6 w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 active:scale-[0.98] text-slate-950 font-black text-base sm:text-lg tracking-wide shadow-lg shadow-emerald-900/40 transition"
+              >
+                <span>{PRODUCT_CONFIG.ctaText}</span>
+                <ArrowRight className="w-5 h-5" />
+              </a>
+
+              <div className="mt-4 flex flex-wrap items-center justify-center gap-4 text-[11px] text-slate-400 font-medium">
+                <span className="flex items-center gap-1">
+                  <Lock className="w-3.5 h-3.5 text-emerald-400" /> Pago Seguro
+                </span>
+                <span className="flex items-center gap-1">
+                  <Zap className="w-3.5 h-3.5 text-amber-400" /> Acceso Inmediato
+                </span>
+                <span className="flex items-center gap-1">
+                  <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" /> Garantía 7 Días
+                </span>
+              </div>
+            </div>
           </div>
 
-          {/* Trust Guarantees */}
-          <div className="mt-5 flex flex-wrap items-center justify-center gap-4 text-xs font-semibold text-slate-500">
-            <span className="flex items-center gap-1.5">
-              <Lock className="w-3.5 h-3.5 text-emerald-600" /> Checkout Seguro
-            </span>
-            <span className="flex items-center gap-1.5">
-              <Zap className="w-3.5 h-3.5 text-amber-500" /> Entrega Digital Inmediata
-            </span>
-            <span className="flex items-center gap-1.5">
-              <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" /> Satisfacción Garantizada
-            </span>
-          </div>
         </div>
+
       </div>
     </section>
   );

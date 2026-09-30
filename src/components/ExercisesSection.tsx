@@ -1,138 +1,75 @@
-import React, { useState } from "react";
-import { CATEGORIES } from "../data/categories";
-import {
-  Flame,
-  Sparkles,
-  ArrowRightLeft,
-  Zap,
-  Target,
-  TrendingUp,
-  Shield,
-  RefreshCw,
-  Compass,
-  Activity,
-  Dumbbell,
-  HandMetal,
-  Users,
-  UserCheck,
-  UserPlus,
-  Grid,
-} from "lucide-react";
-
-const iconMap: Record<string, React.FC<{ className?: string }>> = {
-  Flame,
-  Sparkles,
-  ArrowRightLeft,
-  Zap,
-  Target,
-  TrendingUp,
-  Shield,
-  RefreshCw,
-  Compass,
-  Activity,
-  Dumbbell,
-  HandMetal,
-  Users,
-  UserCheck,
-  UserPlus,
-  Grid,
-};
+import React from "react";
+import { Infinity as InfinityIcon, CheckCircle2 } from "lucide-react";
 
 export const ExercisesSection: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const mainCategories = [
+    { title: "Técnica Individual", desc: "Controles, fintas y definición" },
+    { title: "Pase y Posesión", desc: "Paredes, rondos y apoyos" },
+    { title: "Táctica y Posicionamiento", desc: "Líneas, presión y transiciones" },
+    { title: "Fútbol Base y Formativo", desc: "Tareas adaptadas por nivel" },
+    { title: "Preparación Física con Balón", desc: "Resistencia, agilidad y potencia" },
+    { title: "Espacios Reducidos", desc: "Partidos modificados y 1 vs 1" },
+  ];
 
   return (
     <section
       id="ejercicios"
-      className="py-16 md:py-24 bg-white border-b border-slate-200/60"
+      className="py-16 md:py-24 bg-white border-b border-slate-200/70"
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto">
-          <span className="text-xs uppercase font-extrabold tracking-wider text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
-            Contenido Completo
+          <span className="text-xs uppercase font-extrabold tracking-wider text-emerald-800 bg-emerald-50 px-3.5 py-1.5 rounded-full border border-emerald-200 shadow-2xs inline-block">
+            Variedad Continua
           </span>
+
           <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-black text-slate-950 tracking-tight font-display">
-            1.000 EJERCICIOS DE FÚTBOL
+            Y CUANDO TERMINES LOS 30 DÍAS, PUEDES SEGUIR.
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-600 font-medium">
-            Una biblioteca completa para trabajar diferentes aspectos del juego.
+
+          <p className="mt-4 text-base sm:text-lg text-slate-600 font-medium max-w-2xl mx-auto leading-relaxed">
+            El Reto te da el camino inicial. Además, tienes <strong className="text-slate-900 font-bold">más de 1.000 ejercicios listos para poder entrenar</strong> y seguir mejorando a tu propio ritmo.
           </p>
         </div>
 
-        {/* Clean Category Grid */}
-        <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
-          {CATEGORIES.map((cat) => {
-            const IconComponent = iconMap[cat.iconName] || Grid;
-            const isSelected = selectedCategory === cat.id;
-
-            return (
-              <div
-                key={cat.id}
-                onClick={() => setSelectedCategory(isSelected ? null : cat.id)}
-                className={`p-4 rounded-2xl border transition-all cursor-pointer text-left ${
-                  isSelected
-                    ? "bg-emerald-900 text-white border-emerald-800 shadow-md scale-[1.02]"
-                    : "bg-slate-50 hover:bg-white text-slate-900 border-slate-200/80 hover:border-emerald-300 hover:shadow-sm"
-                }`}
-              >
-                <div className="flex items-center justify-between mb-3">
-                  <div
-                    className={`w-9 h-9 rounded-xl flex items-center justify-center transition-colors ${
-                      isSelected
-                        ? "bg-emerald-800 text-emerald-300"
-                        : "bg-white text-emerald-700 shadow-xs border border-slate-200/60"
-                    }`}
-                  >
-                    <IconComponent className="w-4 h-4" />
-                  </div>
-                  <span
-                    className={`text-xs font-bold px-2 py-0.5 rounded-full ${
-                      isSelected
-                        ? "bg-emerald-800/80 text-emerald-200"
-                        : "bg-slate-200/70 text-slate-700"
-                    }`}
-                  >
-                    +{cat.count}
-                  </span>
+        {/* Clean, compact main categories without individual quantities */}
+        <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
+          {mainCategories.map((cat) => (
+            <div
+              key={cat.title}
+              className="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-emerald-400 transition text-left flex flex-col justify-between"
+            >
+              <div>
+                <div className="flex items-center gap-1.5 text-xs sm:text-sm font-bold text-slate-900 mb-1.5">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                  <span>{cat.title}</span>
                 </div>
-
-                <h3
-                  className={`text-sm sm:text-base font-bold leading-snug ${
-                    isSelected ? "text-white" : "text-slate-900"
-                  }`}
-                >
-                  {cat.name}
-                </h3>
-
-                <p
-                  className={`mt-1.5 text-xs line-clamp-2 leading-relaxed ${
-                    isSelected ? "text-emerald-100/90" : "text-slate-500"
-                  }`}
-                >
-                  {cat.description}
+                <p className="text-xs text-slate-500 leading-snug">
+                  {cat.desc}
                 </p>
-
-                <div className="mt-3 pt-2 border-t border-slate-200/40 flex items-center justify-between text-[11px] font-semibold">
-                  <span
-                    className={
-                      isSelected ? "text-emerald-300" : "text-emerald-600"
-                    }
-                  >
-                    {cat.tag}
-                  </span>
-                  <span
-                    className={
-                      isSelected ? "text-emerald-300" : "text-slate-400"
-                    }
-                  >
-                    Ver detalles →
-                  </span>
-                </div>
               </div>
-            );
-          })}
+
+              <div className="mt-4 pt-2.5 border-t border-slate-200/50 text-[11px] font-semibold text-emerald-700">
+                Categoría disponible
+              </div>
+            </div>
+          ))}
         </div>
+
+        {/* Short reassurance banner */}
+        <div className="mt-8 p-4 rounded-2xl bg-slate-100 border border-slate-200/70 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left text-xs text-slate-700">
+          <div className="flex items-center gap-2">
+            <InfinityIcon className="w-4 h-4 text-emerald-600 shrink-0" />
+            <span>
+              Ejercicios clasificados con diagramas claros y explicaciones directas.
+            </span>
+          </div>
+          <span className="font-bold text-emerald-800">
+            Acceso de por vida incluido
+          </span>
+        </div>
+
       </div>
     </section>
   );

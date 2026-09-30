@@ -7,56 +7,50 @@ export interface FaqItem {
 export const FAQS: FaqItem[] = [
   {
     id: "faq-1",
-    question: "¿Qué es Fútbol+?",
+    question: "¿Qué es el Reto 30 Días?",
     answer:
-      "Fútbol+ es la plataforma y biblioteca profesional de ejercicios de fútbol diseñada específicamente para entrenadores, preparadores físicos, coordinadores y jugadores. Te permite encontrar, filtrar, organizar y crear entrenamientos completos en cuestión de segundos desde cualquier dispositivo.",
+      "Es un plan de entrenamiento de fútbol de 30 días con una sesión preparada para cada día.",
   },
   {
     id: "faq-2",
-    question: "¿Cuántos ejercicios incluye?",
+    question: "¿El acceso termina después de 30 días?",
     answer:
-      "Incluye más de 1.000 ejercicios profesionales clasificados minuciosamente por categorías técnicas, tácticas, físicas y formativas, todos con instrucciones claras, diagramas gráficos del campo, objetivos y variantes.",
+      "No. Los 30 días son el programa. El acceso es de por vida.",
   },
   {
     id: "faq-3",
-    question: "¿Qué incluyen los bonos?",
+    question: "¿Cuánto dura cada entrenamiento?",
     answer:
-      "Recibes 10 bonos profesionales complementarios de forma totalmente gratuita con tu compra de hoy: Guía del entrenador, 100 sesiones listas, 150 ejercicios de finalización, 120 de técnica individual, 100 tácticos, programa de velocidad y agilidad, guía de fútbol base por edades, plan de 30 días, pack de fichas técnicas y el programa completo de preparación física.",
+      "Aproximadamente 20 minutos.",
   },
   {
     id: "faq-4",
-    question: "¿Necesito instalar una aplicación?",
+    question: "¿Puedo entrenar solo?",
     answer:
-      "Puedes usarlo inmediatamente desde tu teléfono, tablet o computadora. Además, puedes añadir el icono de acceso directo en la pantalla de inicio de tu dispositivo con un solo toque, funcionando igual que una aplicación nativa.",
+      "Sí, el Reto está diseñado para que puedas seguir las sesiones por tu cuenta.",
   },
   {
     id: "faq-5",
-    question: "¿Puedo utilizar Fútbol+ desde mi celular?",
+    question: "¿Puedo acceder desde mi celular?",
     answer:
-      "¡Sí, por supuesto! La plataforma está optimizada prioritariamente para teléfonos móviles, lo que te permite consultar ejercicios o preparar sesiones directamente a pie de campo o en el vestuario.",
+      "Sí. También desde tablet y computadora.",
   },
   {
     id: "faq-6",
-    question: "¿Funciona en iPhone?",
+    question: "¿Necesito entrenar todos los días?",
     answer:
-      "Sí, funciona perfectamente en cualquier modelo de iPhone y iPad a través de Safari o Chrome. También puedes añadirlo a la pantalla de inicio con la opción 'Agregar a pantalla de inicio'.",
+      "El programa está organizado en 30 días. Si necesitas adaptar tu rutina, puedes hacerlo según tu disponibilidad.",
   },
   {
     id: "faq-7",
-    question: "¿Funciona en Android?",
+    question: "¿Qué pasa después de terminar el Reto?",
     answer:
-      "Sí, funciona en todos los dispositivos Android modernos a través de Google Chrome y otros navegadores, con opción de instalación directa con un clic.",
+      "Puedes continuar utilizando los +1.000 ejercicios, entrenamientos por objetivo y bonos incluidos.",
   },
   {
     id: "faq-8",
-    question: "¿Necesito crear una cuenta?",
+    question: "¿Necesito descargar una aplicación?",
     answer:
-      "No. Puedes acceder directamente al enlace de Fútbol+ sin crear una cuenta. Tu acceso es inmediato y privado tras confirmar la compra.",
-  },
-  {
-    id: "faq-9",
-    question: "¿Necesito descargar una aplicación desde Google Play o App Store?",
-    answer:
-      "No. Fútbol+ funciona como una aplicación web directa. No ocupa espacio pesado en la memoria de tu teléfono ni requiere descargas engorrosas desde tiendas de aplicaciones.",
+      "No. La plataforma funciona directamente en el navegador de tu dispositivo con acceso instantáneo sin tener que instalar aplicaciones pesadas ni ocupar memoria.",
   },
 ];
