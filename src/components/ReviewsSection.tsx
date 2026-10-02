@@ -62,7 +62,7 @@ const REVIEWS: Review[] = [
     rating: 5,
     date: "Hace 5 días",
     comment:
-      "Compré con dudas por el precio de US$ 7,90, pero el valor es tremendo. El reto de pierna débil en 7 días me ayudó a ganar confianza que antes no tenía.",
+      "Compré con dudas por el precio de US$ 6,90, pero el valor es tremendo. El reto de pierna débil en 7 días me ayudó a ganar confianza que antes no tenía.",
     tag: "Pierna Débil",
     initials: "MV",
     avatarUrl: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=160&auto=format&fit=crop&q=80",

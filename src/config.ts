@@ -17,7 +17,7 @@ export const PRODUCT_CONFIG = {
   badgeLifetime: "RETO DE 30 DÍAS + ACCESO DE POR VIDA",
   ctaText: "QUIERO MI PLAN DE 30 DÍAS",
   regularPrice: "19,90",
-  specialPrice: "7,90",
+  specialPrice: "6,90",
   currency: "US$",
   exerciseCount: "+1.000",
   bonusesCount: "6",

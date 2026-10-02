@@ -27,7 +27,7 @@ export const ValueComparisonSection: React.FC = () => {
             Oferta Completa
           </span>
           <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-black text-slate-950 tracking-tight font-display">
-            TODO INCLUIDO POR SOLO US$ 7,90
+            TODO INCLUIDO POR SOLO {PRODUCT_CONFIG.currency} {PRODUCT_CONFIG.specialPrice}
           </h2>
           <p className="mt-3 text-base sm:text-lg text-slate-600 font-medium">
             Empieza con el Reto 30 Días y quédate con todo el contenido de por vida.
